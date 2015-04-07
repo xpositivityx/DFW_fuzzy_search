@@ -61,6 +61,24 @@ function enqueue_search_scripts(){
 
 add_action('wp_enqueue_scripts', 'enqueue_search_scripts');
 
+function generate_search_bar(){
+	ob_start();
+	?> 
+	<li>
+    <form class="navbar-search pull-right">
+      <input type="text" class="form-control input-lg" id="search_bar" placeholder="Search">
+    </form>
+  </li>
+	<?php
+	$result = ob_get_contents();
+	ob_end_clean();
+
+	return $result;
+}
+
+
+
+
 
 
 

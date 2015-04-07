@@ -8,7 +8,6 @@ jQuery(document).ready(function(){
                     crit: request.term,
                 },
                 success: function( data ) {
-                    console.log(data);
                   response( $.map( data, function( item ) {
                     arr = item.split(',');
                     return {
